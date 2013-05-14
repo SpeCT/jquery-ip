@@ -93,7 +93,7 @@
 				}
 			}
 
-			$('input.ip_octet').bind('keydown', function(e){
+			$('input.ip_octet', $this.next('.ip_container')).bind('keydown', function(e){
 				if (!isValidKey(e)) return false;
 
 				var next_octet = $(this).next('input.ip_octet');
