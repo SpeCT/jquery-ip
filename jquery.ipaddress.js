@@ -24,8 +24,9 @@
 				if (options.cidr) {
 					octet_html += '/<input type="text" class="ip_cidr ip_octet" id="' + id_prefix + '_octet_cidr" maxlength="2" value="' + ip_cidr + '" />';
 				}
-
-				$this.after($('<div class="ip_container" style="display: inline-block;"/>').html(octet_html));
+				
+				var ipContainerStyle = 'display: inline-block; zoom: 1; *display: inline;';
+				$this.after($('<div class="ip_container" style="' + ipContainerStyle + '"/>').html(octet_html));
 				$this.addClass('ip-enabled');
 			}
 
